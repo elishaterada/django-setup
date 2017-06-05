@@ -1,0 +1,35 @@
+#!/bin/bash
+
+text_color=`tput setaf 2`
+reset=`tput sgr0`
+
+echo -e "${text_color}Let's setup a Django environment!${reset}"
+
+# Setup Django
+# https://docs.djangoproject.com/
+
+echo -e "\n${text_color}Install Django${reset}"
+pip install django
+
+echo -e "\n${text_color}Start project: app${reset}"
+django-admin startproject app
+
+echo -e "\n${text_color}Migrate${reset}"
+python app/manage.py migrate
+
+echo -e "\n${text_color}Create super user${reset}"
+python app/manage.py createsuperuser
+
+# Setup Django REST Framework
+# http://www.django-rest-framework.org/
+echo -e "\n${text_color}Install Django REST Framework${reset}"
+pip install djangorestframework
+pip install django-filter
+
+# Check to see everything is good
+echo -e "\n${text_color}Check to see everything is good${reset}"
+python app/manage.py check
+
+# Start Server
+echo -e "\n${text_color}Start Django server${reset}"
+python app/manage.py runserver
