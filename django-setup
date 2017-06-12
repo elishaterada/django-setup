@@ -3,7 +3,7 @@
 text_color=`tput setaf 2`
 reset=`tput sgr0`
 
-echo -e "${text_color}Let's setup a Django environment!${reset}"
+echo -e "${text_color}Let's setup a Django REST environment!${reset}"
 
 echo -e "\n${text_color}Create requirements.txt and install dependencies${reset}"
 
@@ -43,10 +43,6 @@ python app/manage.py migrate
 
 echo -e "\n${text_color}Create super user${reset}"
 python app/manage.py createsuperuser
-
-# Setup Django REST Framework
-# http://www.django-rest-framework.org/
-echo -e "\n${text_color}Install Django REST Framework${reset}"
 
 # Check to see everything is good
 echo -e "\n${text_color}Check to see everything is good${reset}"
