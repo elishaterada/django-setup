@@ -5,11 +5,35 @@ reset=`tput sgr0`
 
 echo -e "${text_color}Let's setup a Django environment!${reset}"
 
+echo -e "\n${text_color}Create requirements.txt and install dependencies${reset}"
+
+echo "django
+djangorestframework
+django-filter" >> requirements.txt
+
+pip install -r requirements.txt
+
+# .gitignore
+# https://github.com/django/django/blob/master/.gitignore
+echo -e "${text_color}Add Django specific ignore rules to .gitignore${reset}"
+
+echo "*.egg-info
+*.pot
+*.py[co]
+.tox/
+__pycache__
+MANIFEST
+dist/
+docs/_build/
+docs/locale/
+node_modules/
+tests/coverage_html/
+tests/.coverage
+build/
+tests/report/" >> .gitignore
+
 # Setup Django
 # https://docs.djangoproject.com/
-
-echo -e "\n${text_color}Install Django${reset}"
-pip install django
 
 echo -e "\n${text_color}Start project: app${reset}"
 django-admin startproject app
@@ -23,8 +47,6 @@ python app/manage.py createsuperuser
 # Setup Django REST Framework
 # http://www.django-rest-framework.org/
 echo -e "\n${text_color}Install Django REST Framework${reset}"
-pip install djangorestframework
-pip install django-filter
 
 # Check to see everything is good
 echo -e "\n${text_color}Check to see everything is good${reset}"
