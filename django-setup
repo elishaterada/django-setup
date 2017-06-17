@@ -36,18 +36,18 @@ tests/report/" >> .gitignore
 # https://docs.djangoproject.com/
 
 echo -e "\n${text_color}Start project: app${reset}"
-django-admin startproject app
+django-admin startproject app .
 
 echo -e "\n${text_color}Migrate${reset}"
-python app/manage.py migrate
+python manage.py migrate
 
 echo -e "\n${text_color}Create super user${reset}"
-python app/manage.py createsuperuser
+python manage.py createsuperuser
 
 # Check to see everything is good
 echo -e "\n${text_color}Check to see everything is good${reset}"
-python app/manage.py check
+python manage.py check
 
 # Start Server
 echo -e "\n${text_color}Start Django server${reset}"
-python app/manage.py runserver
+python manage.py runserver
