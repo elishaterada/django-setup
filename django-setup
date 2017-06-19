@@ -15,7 +15,7 @@ pip install -r requirements.txt
 
 # .gitignore
 # https://github.com/django/django/blob/master/.gitignore
-echo -e "${text_color}Add Django specific ignore rules to .gitignore${reset}"
+echo -e "\n${text_color}Add Django specific ignore rules to .gitignore${reset}"
 
 echo "*.egg-info
 *.pot
