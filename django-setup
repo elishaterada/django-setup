@@ -47,8 +47,8 @@ echo "# Project Name
 echo -e "\n${text_color}Start project: app${reset}"
 django-admin startproject app .
 
-# Check to see everything is good
-echo -e "\n${text_color}Check to see everything is good${reset}"
+# Check to see if everything looks good
+echo -e "\n${text_color}Check to see if everything looks good${reset}"
 python manage.py check
 
 # Setup Instruction
