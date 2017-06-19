@@ -47,12 +47,6 @@ echo "# Project Name
 echo -e "\n${text_color}Start project: app${reset}"
 django-admin startproject app .
 
-echo -e "\n${text_color}Migrate${reset}"
-python manage.py migrate
-
-echo -e "\n${text_color}Create super user${reset}"
-python manage.py createsuperuser
-
 # Check to see everything is good
 echo -e "\n${text_color}Check to see everything is good${reset}"
 python manage.py check
