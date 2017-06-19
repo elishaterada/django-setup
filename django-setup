@@ -52,4 +52,8 @@ echo -e "\n${text_color}Check to see everything is good${reset}"
 python manage.py check
 
 # Setup Instruction
-echo -e "\n${text_color}Don't forget to setup Django REST Framework: http://www.django-rest-framework.org/"
+echo -e "\n${text_color}Hooray! Here are your next steps:${reset}
+\nSetup your Database:
+\tCreate Postgres DB: https://www.digitalocean.com/community/tutorials/how-to-use-postgresql-with-your-django-application-on-ubuntu-16-04#create-a-database-and-database-user
+\tBootstrap Postgres in Django: https://stackoverflow.com/questions/5394331/how-to-setup-postgresql-database-in-django#answer-5421511
+\nSetup Django REST Framework: http://www.django-rest-framework.org/"
