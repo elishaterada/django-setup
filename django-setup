@@ -32,6 +32,15 @@ tests/.coverage
 build/
 tests/report/" >> .gitignore
 
+# README.md
+echo -e "\n${text_color}Generate a simple README.md file${reset}"
+
+echo "# Project Name
+
+## Requirements
+
+* Python 3.7+" > README.md
+
 # Setup Django
 # https://docs.djangoproject.com/
 
