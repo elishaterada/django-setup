@@ -57,6 +57,5 @@ python manage.py createsuperuser
 echo -e "\n${text_color}Check to see everything is good${reset}"
 python manage.py check
 
-# Start Server
-echo -e "\n${text_color}Start Django server${reset}"
-python manage.py runserver
+# Setup Instruction
+echo -e "\n${text_color}Don't forget to setup Django REST Framework: http://www.django-rest-framework.org/"
